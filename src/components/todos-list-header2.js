@@ -13,7 +13,9 @@ class TodosListHeader extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.props.tasks.map((task, index) => <Task key={index} task={task} />)}
+                    {this.props.tasks.map(
+                        (task, index) =>
+                            <Task key={index} taskid={index} task={task} />)}
                 </tbody>
             </table>
         );
@@ -22,7 +24,7 @@ class TodosListHeader extends Component {
 
 function mapStateToProps(state) {
     return {
-        tasks:state.tasks
+        tasks: state.tasks
     }
 }
 
